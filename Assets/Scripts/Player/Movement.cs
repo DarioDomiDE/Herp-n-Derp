@@ -38,6 +38,10 @@ public class Movement : MonoBehaviour {
             this.currentDirection = direction.right;
             this.TimeLeft = this.defaultTime;
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.LoadLevel("scene1");
+        }
     }
 
     private void DoMovement()
@@ -56,14 +60,6 @@ public class Movement : MonoBehaviour {
             this.transform.Rotate(new Vector3(0, 1.0f * (int)this.currentDirection, 0), Angle * Time.deltaTime);
         }
 
-    }
-
-    private void GoLeftForward()
-    {
-    }
-
-    private void GoLeftBackward()
-    {
     }
 
 
