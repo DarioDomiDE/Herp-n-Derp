@@ -28,7 +28,6 @@ public class Timer : MonoBehaviour
 	void Update() 
 	{
 		timer -= Time.deltaTime;
-		Debug.Log(timer);
 		if(timer < 0)
 			SceneBlender.FadeToScene("game_over_scene");
 	}
