@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
-
-    void Start()
+    
+    void OnCollisionEnter (Collision col)
     {
+        if(col.gameObject.tag != "Item")
+        {
+            SoundManager.Instance.Play("Derp_collision", 1.0f);
+        }
     }
 
-    void Update()
-    {
-
-    }
 
 }

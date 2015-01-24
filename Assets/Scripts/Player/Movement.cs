@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour {
 
     private float Speed = 3.0f;
     private float SideSpeed = 1.0f;
-    private float Angle = 180.0f;
+    private float Angle = 200.0f;
     private float defaultTime = 0.3f;
 
     private bool isAllowed = true;
@@ -36,12 +36,14 @@ public class Movement : MonoBehaviour {
                 isAllowed = false;
                 this.currentDirection = direction.right;
                 this.TimeLeft = this.defaultTime;
+                SoundManager.Instance.Play("footsteps.L", 1.0f);
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 isAllowed = false;
                 this.currentDirection = direction.left;
                 this.TimeLeft = this.defaultTime;
+                SoundManager.Instance.Play("footsteps.R", 1.0f);
             }
         }
     }

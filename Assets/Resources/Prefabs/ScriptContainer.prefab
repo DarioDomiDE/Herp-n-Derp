@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: ScriptContainer
   m_TagString: Container
@@ -51,6 +52,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointCounter: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991748dc33b20bb42869d950d0c6f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioList:
+  - {fileID: 8300000, guid: 3b4af49d7fbe8624384d755529c56d91, type: 3}
+  - {fileID: 8300000, guid: bc0f344d52fe0184eb04b1f889f26f9b, type: 3}
+  - {fileID: 8300000, guid: 60fee2fcc9730274cac4e1f1bbacd66c, type: 3}
+  - {fileID: 8300000, guid: b4bf50999e9dec64bb3893222f0398d9, type: 3}
+  - {fileID: 8300000, guid: bf263722e55323a41a7a13295b1ef4fd, type: 3}
+  - {fileID: 8300000, guid: 69ad319c97c832d49997af5ee1b22f41, type: 3}
+  - {fileID: 8300000, guid: b1df593764040f843a4e5297e3e428d4, type: 3}
+  - {fileID: 8300000, guid: c9af01792153daa4182348b50aeb18ad, type: 3}
+  - {fileID: 8300000, guid: d191780c18f5c0e4d8f9d2095cfbbe0d, type: 3}
+  - {fileID: 8300000, guid: 7fb709ca685276640b6eb157cc42b38e, type: 3}
+  - {fileID: 8300000, guid: e88247515540d1a4f857f438c3f3f847, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
