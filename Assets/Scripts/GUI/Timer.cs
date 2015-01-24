@@ -40,6 +40,7 @@ public class Timer : MonoBehaviour
         {
             TransfareToPoints();
             GameObject.FindGameObjectWithTag("SceneBlender").GetComponent<SceneBlender>().FadeToScene("gameover");
+            SoundManager.Instance.Play("Derp_sad", 1.0f);
         }
 
 	}

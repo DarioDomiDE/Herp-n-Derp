@@ -26,6 +26,7 @@ public class ItemCatcher : MonoBehaviour {
                         catchedCounter++;
                         GameObject.Destroy(currentItem.gameObject);
                         currentItem = null;
+                        SoundManager.Instance.Play("Derp_eating", 1.0f);
                     }
                     break;
                 case Item.status.longPressed:
@@ -33,11 +34,13 @@ public class ItemCatcher : MonoBehaviour {
                     {
                         currentItem.transform.parent = this.transform.parent;
                         catchedObject = currentItem.gameObject;
+                        SoundManager.Instance.Play("Derp_pickup", 1.0f);
                     }
                     if(Input.GetKeyUp(KeyCode.E))
                     {
                         currentItem.transform.parent = this.transform.parent.parent;
                         catchedObject = null;
+                        SoundManager.Instance.Play("Derp_drop", 1.0f);
                     }
                     break;
             }
