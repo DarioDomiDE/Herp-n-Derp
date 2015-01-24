@@ -27,7 +27,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: SceneBlender
-  m_TagString: Untagged
+  m_TagString: SceneBlender
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +59,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 400002}
-  m_RootOrder: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -73,7 +72,6 @@ Transform:
   - {fileID: 400000}
   - {fileID: 400004}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -85,7 +83,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 400002}
-  m_RootOrder: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632a5420efc98144ea2ff3a2e037203d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: 0
   FadeInAtStart: 1
   _state: -1
   MAX_SCALE: {x: 16, y: 16}
