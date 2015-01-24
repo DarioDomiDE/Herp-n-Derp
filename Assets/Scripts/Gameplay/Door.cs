@@ -6,28 +6,60 @@ public class Door : MonoBehaviour {
     [SerializeField]
     public GameObject searchedObject;
     public int searchedCounter;
+    public int pressedButtons;
 
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
+    private bool opened = false;
+    private int alreadyPressedButtons = 0;
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+
+    }
+
+    public void AddPressedButton()
+    {
+        alreadyPressedButtons++;
+        CheckAllButtonsPressed();
+    }
+    public void RemovePressedButton()
+    {
+        alreadyPressedButtons--;
+        CheckAllButtonsPressed();
+    }
+
+    private void CheckAllButtonsPressed()
+    {
+        if (opened == false && alreadyPressedButtons == pressedButtons)
+        {
+            opened = true;
+            // Disable Texture
+        }
+        else if(opened == true && alreadyPressedButtons != pressedButtons)
+        {
+            opened = false;
+            // Enable Texture
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            if (GameObject.FindGameObjectWithTag("ItemCatcher").GetComponent<ItemCatcher>().CheckItem(this.searchedObject, this.searchedCounter))
+            if ((opened == true && searchedCounter == 0) ||
+                (
+                pressedButtons == 0 &&
+                GameObject.FindGameObjectWithTag("ItemCatcher").GetComponent<ItemCatcher>().CheckItem(this.searchedObject, this.searchedCounter)
+                )
+                )
             {
-                // Do Door
-                GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().TransfareToPoints();
-                GameObject.FindGameObjectWithTag("SceneBlender").GetComponent<SceneBlender>().FadeNextScene();
-                SoundManager.Instance.Play("Derp_happy", 1.0f);
+				GameManager.SetNextLevel();
             }
         }
-
     }
 
 }

@@ -5,7 +5,6 @@ public class GUIscript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	//void OnGUI()
