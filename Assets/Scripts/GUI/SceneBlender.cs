@@ -117,7 +117,7 @@ public class SceneBlender : MonoBehaviour
         // Config -> Level
         Level[0] = "scene1";
         Level[1] = "scene2";
-        Level[2] = "sceneK";
+        Level[2] = "scene3";
 
 	}
 
