@@ -29,6 +29,9 @@ public class Timer : MonoBehaviour
 	{
 		timer -= Time.deltaTime;
 		if(timer < 0)
-			SceneBlender.FadeToScene("game_over_scene");
+        {
+            GameObject.FindGameObjectWithTag("SceneBlender").GetComponent<SceneBlender>().FadeToScene("gameover");
+        }
+
 	}
 }

@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SceneBlender : MonoBehaviour 
 {
+
+    private string[] Level = new string[10];
+    public int currentLevel = 0;
+    private bool enable = true;
+
 	//private bool _blend = false;
 	//[SerializeField]
 	//private bool blend = false;
@@ -85,7 +91,7 @@ public class SceneBlender : MonoBehaviour
 			_instance = this;
 	}
 
-	void Start() 
+	void Start()
 	{
 		LoadNextScene = "";
 		if(targetObject == null)
@@ -106,7 +112,13 @@ public class SceneBlender : MonoBehaviour
 			alpha = 0.6f;
 			state = STATE.OUT;
 			FadeIn();
-		}	
+		}
+
+        // Config -> Level
+        Level[0] = "scene1";
+        Level[1] = "scene2";
+        Level[2] = "sceneK";
+
 	}
 
 	public void SetTarget(GameObject TargetObject)
@@ -125,14 +137,36 @@ public class SceneBlender : MonoBehaviour
 		FadeOut();
 	}
 
-	public static void FadeToScene(string SceneName)
-	{
-		Debug.Log("fdsd");
-		Instance.FadeInAtStart = true;
-		Instance.LoadNextScene = SceneName;
-		Instance.FadeOut();
+    public void FadeToScene(string Scene)
+    {
+        Fade(Scene);
+    }
+
+	public void FadeNextScene()
+    {
+        Fade(GetNextScene());
 	}
-	
+
+    private void Fade(string Scene)
+    {
+        if (enable)
+        {
+            enable = false;
+
+            Instance.FadeInAtStart = true;
+            Instance.LoadNextScene = Scene;
+            Instance.FadeOut();
+        }
+    }
+
+    private string GetNextScene()
+    {
+        if (Level.Length > currentLevel)
+        {
+            return Level[++currentLevel];
+        }
+        return "gameover";
+    }
 
 	public void FadeIn()
 	{

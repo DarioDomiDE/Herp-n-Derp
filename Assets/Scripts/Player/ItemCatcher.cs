@@ -62,7 +62,7 @@ public class ItemCatcher : MonoBehaviour {
 
     public bool CheckItem(GameObject searchedObject, int searchedCounter)
     {
-
+        return true;
     }
 
 }
