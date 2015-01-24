@@ -34,13 +34,13 @@ public class Movement : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.W))
             {
                 isAllowed = false;
-                this.currentDirection = direction.left;
+                this.currentDirection = direction.right;
                 this.TimeLeft = this.defaultTime;
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 isAllowed = false;
-                this.currentDirection = direction.right;
+                this.currentDirection = direction.left;
                 this.TimeLeft = this.defaultTime;
             }
         }

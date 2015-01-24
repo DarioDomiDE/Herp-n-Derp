@@ -161,9 +161,9 @@ public class SceneBlender : MonoBehaviour
 
     private string GetNextScene()
     {
-        if (Level.Length > currentLevel)
+        if (Level[++currentLevel] != null)
         {
-            return Level[++currentLevel];
+            return Level[currentLevel];
         }
         return "winscreen";
     }
@@ -230,10 +230,9 @@ public class SceneBlender : MonoBehaviour
 			}
 			return true;
 		}
-		else
+		else if (LoadNextScene != "")
         {
-            if (LoadNextScene != "")
-                Application.LoadLevel(LoadNextScene);
+            Application.LoadLevel(LoadNextScene);
         }
 
 		return false;
