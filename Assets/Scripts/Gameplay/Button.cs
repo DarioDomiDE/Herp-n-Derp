@@ -20,7 +20,7 @@ public class Button : MonoBehaviour {
         if(other.tag == "Player" || other.tag == "Crate")
         {
             this.transform.position = this.transform.position + new Vector3(0, PositionDown, 0);
-            //GameMaster.Door.AddPressedButton();
+            GameManager.door.AddPressedButton();
         }
     }
 
@@ -31,7 +31,7 @@ public class Button : MonoBehaviour {
             if (other.tag == "Player" || other.tag == "Crate")
             {
                 this.transform.position = this.transform.position + new Vector3(0, PositionUp, 0);
-                //GameMaster.Door.RemovePressedButton();
+                GameManager.door.RemovePressedButton();
             }
         }
     }

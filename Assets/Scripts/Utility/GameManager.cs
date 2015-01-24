@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
 	public static void SetGameOver()
 	{
 		sound.Play("Derp_sad", 1.0f);
-		timer.TransfareToPoints();
 		blender.FadeToScene("gameover");
 	}
 
