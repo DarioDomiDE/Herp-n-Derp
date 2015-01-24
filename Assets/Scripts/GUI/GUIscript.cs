@@ -8,15 +8,13 @@ public class GUIscript : MonoBehaviour {
 	
 	}
 	
-	void OnGUI()
-	{
-		if(GUI.Button(new Rect(20, 40, 80, 20), "Next Level"))
-		{
-			SceneBlender.FadeToScene("scene2");
-		}
-
-
-	}
+	//void OnGUI()
+	//{
+		//if(GUI.Button(new Rect(20, 40, 80, 20), "Next Level"))
+		//{
+			//SceneBlender.FadeToScene("scene2");
+		//}
+	//}
 
 	void Update () {
 	
