@@ -25,6 +25,6 @@ public class Item : MonoBehaviour {
 	void Update () 
 	{
 		TextPosition = Camera.main.WorldToScreenPoint(this.transform.position);
-	
 	}
+
 }
