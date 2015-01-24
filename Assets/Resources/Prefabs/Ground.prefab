@@ -46,7 +46,6 @@ Transform:
   m_LocalScale: {x: .278551549, y: -.0199999996, z: .0666666701}
   m_Children: []
   m_Father: {fileID: 437676}
-  m_RootOrder: 0
 --- !u!4 &437676
 Transform:
   m_ObjectHideFlags: 1
@@ -55,11 +54,10 @@ Transform:
   m_GameObject: {fileID: 137676}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.58999991, y: 15, z: 15}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!23 &2337676
 Renderer:
   m_ObjectHideFlags: 1
@@ -78,8 +76,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &3337676
 MeshFilter:
   m_ObjectHideFlags: 1
