@@ -8,7 +8,19 @@ public class Door : MonoBehaviour {
     public int searchedCounter;
     public int pressedButtons;
 
-    private bool opened = false;
+    private bool _opened = false;
+	private bool opened
+	{
+		get { return _opened; }
+		set
+		{
+			if(value &&(value != _opened))
+			{
+				_opened = true;
+				GameManager.sound.Play("Door - open", 1.0f);
+			}
+		}
+	}
     private int alreadyPressedButtons = 0;
 
     void Start()
@@ -16,10 +28,10 @@ public class Door : MonoBehaviour {
 
     }
 
-    void Update()
-    {
+	//void Update()
+	//{
 
-    }
+	//}
 
     public void AddPressedButton()
     {
