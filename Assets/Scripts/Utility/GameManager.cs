@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 		timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
 		blender = SceneBlender.Instance;
 		sound = SoundManager.Instance;
-		door = GameObject.Find("Door").GetComponent<Door>();
+        door = GameObject.FindGameObjectWithTag("Door").GetComponent<Door>();
 		items = new List<Item>();
 		foreach(Item item in Component.FindObjectsOfType<Item>())
 			items.Add(item);
