@@ -6,11 +6,14 @@ public class UpdateManager : MonoBehaviour {
     public delegate void InputHandler();
     public event InputHandler OnUpdate;
 
-	void Update () {
-
-	    if(OnUpdate != null)
+	void Update ()
+    {
+        if(Input.anyKey || Input.anyKeyDown)
         {
-            OnUpdate();
+            if (OnUpdate != null)
+            {
+                OnUpdate();
+            }
         }
 	}
 
