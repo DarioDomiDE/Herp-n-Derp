@@ -322,8 +322,8 @@ GUITexture:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1320383353}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: fa8063bcd2beccf4cb080ec7bc6287a3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Texture: {fileID: 2800000, guid: 4217ccbbb9489f44a8aac96cd4fd560b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_PixelInset:
     serializedVersion: 2
     x: 0
@@ -363,7 +363,7 @@ Transform:
   m_GameObject: {fileID: 1320383353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .5, y: .5, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children:
   - {fileID: 1414825710}
   m_Father: {fileID: 0}
@@ -376,8 +376,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1414825710}
+  - 131: {fileID: 1414825711}
   m_Layer: 0
-  m_Name: Black
+  m_Name: Spot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,11 +391,30 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1414825709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.635318339, y: -.189125419, z: -.65907383}
-  m_LocalScale: {x: .0666666701, y: .0666666701, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1320383356}
   m_RootOrder: 0
+--- !u!131 &1414825711
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414825709}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: fa8063bcd2beccf4cb080ec7bc6287a3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1 &1434209270
 GameObject:
   m_ObjectHideFlags: 0
