@@ -6,6 +6,7 @@ public class Button : MonoBehaviour {
     public bool stayDown = true;
     private float PositionUp = 0.15f;
     private float PositionDown = -0.15f;
+    private bool enable = false;
 
 	void Start () {
 	    
@@ -17,10 +18,14 @@ public class Button : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" || other.tag == "Crate")
+        if (enable == false)
         {
-            this.transform.position = this.transform.position + new Vector3(0, PositionDown, 0);
-            GameManager.door.AddPressedButton();
+            if (other.tag == "Player" || other.tag == "Crate")
+            {
+                this.transform.position = this.transform.position + new Vector3(0, PositionDown, 0);
+                GameManager.door.AddPressedButton();
+                enable = true;
+            }
         }
     }
 
@@ -32,6 +37,7 @@ public class Button : MonoBehaviour {
             {
                 this.transform.position = this.transform.position + new Vector3(0, PositionUp, 0);
                 GameManager.door.RemovePressedButton();
+                enable = false;
             }
         }
     }
