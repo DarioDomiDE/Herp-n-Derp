@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour 
 {
+	private static bool IsGamingOver = false;
 	public static Timer timer;
 	public static SceneBlender blender;
 	public static SoundManager sound;
@@ -28,8 +29,12 @@ public class GameManager : MonoBehaviour
 	
 	public static void SetGameOver()
 	{
-		sound.Play("Derp_sad", 1.0f);
-		blender.FadeToScene("gameover");
+		if(!IsGamingOver)
+		{
+			IsGamingOver = true;
+			sound.Play("Derp_sad", 1.0f);
+			blender.FadeToScene("gameover");
+		}
 	}
 
 	public static void SetGameWin()

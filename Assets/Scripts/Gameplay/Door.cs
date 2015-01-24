@@ -7,7 +7,7 @@ public class Door : MonoBehaviour {
     public GameObject searchedObject;
     public int searchedCounter;
     public int pressedButtons;
-
+	[SerializeField]
     private bool _opened = false;
 	private bool opened
 	{
@@ -17,7 +17,7 @@ public class Door : MonoBehaviour {
 			if(value &&(value != _opened))
 			{
 				_opened = true;
-				GameManager.sound.Play("Door - open", 1.0f);
+				GameManager.sound.Play("Door - Open", 1.0f);
 			}
 		}
 	}
