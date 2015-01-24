@@ -6,14 +6,43 @@ public class Door : MonoBehaviour {
     [SerializeField]
     public GameObject searchedObject;
     public int searchedCounter;
+    public int pressedButtons;
 
-	void Start () {
-	
-	}
-	
-	//void Update () {
-	
-	//}
+    private bool opened = false;
+    private int alreadyPressedButtons = 0;
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+
+    }
+
+    public void AddPressedButton()
+    {
+        alreadyPressedButtons++;
+    }
+    public void RemovePressedButton()
+    {
+        alreadyPressedButtons--;
+    }
+
+    private void CheckAllButtonsPressed()
+    {
+        if (opened == false && alreadyPressedButtons == pressedButtons)
+        {
+            opened = true;
+            // Disable Texture
+        }
+        else if(opened == true && alreadyPressedButtons != pressedButtons)
+        {
+            opened = false;
+            // Enable Texture
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -31,7 +60,6 @@ public class Door : MonoBehaviour {
 				//SoundManager.Instance.Play("Derp_happy", 1.0f);
             }
         }
-
     }
 
 }
