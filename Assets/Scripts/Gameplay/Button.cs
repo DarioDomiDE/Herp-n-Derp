@@ -25,6 +25,7 @@ public class Button : MonoBehaviour {
                 this.transform.position = this.transform.position + new Vector3(0, PositionDown, 0);
                 GameManager.door.AddPressedButton();
                 enable = true;
+                SoundManager.Instance.Play("Switch Down", 1.0f);
             }
         }
     }

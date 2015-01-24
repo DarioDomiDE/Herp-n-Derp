@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour {
                 isAllowed = false;
                 this.currentDirection = direction.right;
                 this.TimeLeft = this.defaultTime;
-                SoundManager.Instance.Play("footsteps.L", 1.0f);
+                SoundManager.Instance.Play("footsteps.L", 0.5f);
                 this.GetComponent<Animation>().Play("Walk");
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -48,7 +48,7 @@ public class Movement : MonoBehaviour {
                 isAllowed = false;
                 this.currentDirection = direction.left;
                 this.TimeLeft = this.defaultTime;
-                SoundManager.Instance.Play("footsteps.R", 1.0f);
+                SoundManager.Instance.Play("footsteps.R", 0.5f);
                 this.GetComponent<Animation>().Play("Walk");
             }
 
