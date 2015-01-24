@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameEvents {
 
-    private static GameEvents instance = null;
+	private static GameEvents instance = null;
     public static GameEvents GetInstance()
     {
         if(instance == null)

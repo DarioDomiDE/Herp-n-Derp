@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Points : MonoBehaviour {
 
-    public float PointCounter = 0.0f;
+    public int PointCounter = 0;
 
     private static Points _instance = null;
     public static Points Instance
@@ -24,4 +24,10 @@ public class Points : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
+	public void AddPoints(int points)
+	{
+		PointCounter = points;
+		GameObject.FindGameObjectWithTag("PointCounter").GetComponent<GUIText>().text = PointCounter.ToString();
+	}
+	
 }
