@@ -9,12 +9,22 @@ public class Item : MonoBehaviour {
         longPressed
     }
     public status itemStatus = status.singlePress;
+	public Vector2 TextPosition
+	{
+		get;
 
-	void Start () {
+		private set;
+	
+	}
+
+	void Start () 
+	{
 	
 	}
 	
-	void Update () {
+	void Update () 
+	{
+		TextPosition = Camera.main.WorldToScreenPoint(this.transform.position);
 	
 	}
 }
