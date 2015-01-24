@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f5f7481463ef840b0ff92960210ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startValue: 20
 --- !u!1 &160610778
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +413,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c0efdc174b9682349bd4be992ccc9e91, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c0efdc174b9682349bd4be992ccc9e91, type: 3}
       propertyPath: m_LocalScale.x
@@ -575,6 +576,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 467802, guid: 10397cbaa7f1fca45b7b344e8afb7555, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367802, guid: 10397cbaa7f1fca45b7b344e8afb7555, type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -795,7 +800,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c0efdc174b9682349bd4be992ccc9e91, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c0efdc174b9682349bd4be992ccc9e91, type: 3}
       propertyPath: m_LocalScale.x
@@ -981,10 +986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c586f97c1fb0c4dbfb072099fa61fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
-  SideSpeed: 1
-  Angle: 90
-  defaultTime: .5
 --- !u!54 &1339601005
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1157,6 +1158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632a5420efc98144ea2ff3a2e037203d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: 0
   FadeInAtStart: 1
   _state: -2
   MAX_SCALE: {x: 16, y: 16}
@@ -1869,3 +1871,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f5f7481463ef840b0ff92960210ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startValue: 20
