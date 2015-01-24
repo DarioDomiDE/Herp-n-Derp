@@ -3156,7 +3156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   searchedObject: {fileID: 0}
   searchedCounter: 0
-  pressedButtons: 4
+  pressedButtons: 1
 --- !u!1 &560952217
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,7 +5020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f5f7481463ef840b0ff92960210ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startValue: 4
+  startValue: 30
 --- !u!132 &918314670
 GUIText:
   m_ObjectHideFlags: 0
@@ -7217,6 +7217,10 @@ Prefab:
     - target: {fileID: 100002, guid: 49d18a77ac9a5fc4c92edfbabaf1f9b5, type: 2}
       propertyPath: m_TagString
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 49d18a77ac9a5fc4c92edfbabaf1f9b5, type: 2}
+      propertyPath: pressedButtons
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49d18a77ac9a5fc4c92edfbabaf1f9b5, type: 2}
@@ -9863,7 +9867,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: d649e34d4ac245d41868643286f64ed2, type: 2}
       propertyPath: startValue
-      value: 4
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d649e34d4ac245d41868643286f64ed2, type: 2}

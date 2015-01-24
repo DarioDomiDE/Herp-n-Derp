@@ -89,7 +89,7 @@ public class Movement : MonoBehaviour {
 
 	private void CheckFalling()
 	{
-		if(gameObject.transform.position.y < ( groundHeight - 0.2 ))
+		if(gameObject.transform.position.y < ( groundHeight - 0.5f ))
 		{
 			if(!falling)
 			{

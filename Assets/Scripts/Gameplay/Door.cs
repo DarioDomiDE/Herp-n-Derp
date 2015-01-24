@@ -50,11 +50,13 @@ public class Door : MonoBehaviour {
         {
             opened = true;
             // Disable Texture
+            GameManager.door.transform.FindChild("Key").GetComponent<MeshRenderer>().enabled = false;
         }
         else if(opened == true && alreadyPressedButtons != pressedButtons)
         {
             opened = false;
             // Enable Texture
+            GameManager.door.transform.FindChild("Key").GetComponent<MeshRenderer>().enabled = true;
         }
     }
 

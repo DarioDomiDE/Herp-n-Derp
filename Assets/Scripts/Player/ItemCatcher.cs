@@ -30,7 +30,7 @@ public class ItemCatcher : MonoBehaviour {
                     }
                     break;
                 case Item.status.longPressed:
-                    if (Input.GetKeyDown(KeyCode.E)) // Y und 0
+                    if (Input.GetKeyDown(KeyCode.U))
                     {
                         currentItem.transform.parent = this.transform.parent;
                         catchedObject = currentItem.gameObject;
