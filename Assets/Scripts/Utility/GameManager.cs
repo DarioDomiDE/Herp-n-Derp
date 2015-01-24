@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 	public static Timer timer;
 	public static SceneBlender blender;
 	public static SoundManager sound;
-	public static Movement player;
 	public static Door door;
 	public static List<Item> items;
 
@@ -17,7 +16,6 @@ public class GameManager : MonoBehaviour
 		timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
 		blender = SceneBlender.Instance;
 		sound = SoundManager.Instance;
-		player = GameObject.Find("Player").GetComponent<Movement>();
 		door = GameObject.Find("Door").GetComponent<Door>();
 		items = new List<Item>();
 		foreach(Item item in Component.FindObjectsOfType<Item>())
@@ -31,7 +29,6 @@ public class GameManager : MonoBehaviour
 	public static void SetGameOver()
 	{
 		sound.Play("Derp_sad", 1.0f);
-		timer.TransfareToPoints();
 		blender.FadeToScene("gameover");
 	}
 

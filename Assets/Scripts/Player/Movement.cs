@@ -20,14 +20,15 @@ public class Movement : MonoBehaviour {
 
 	void Start ()
     {
-        GameEvents.GetInstance().OnKeyDown += this.DoInput;
+        //GameEvents.GetInstance().OnKeyDown += this.DoInput;
 	}
 	
 	void Update () {
         DoMovement();
+        DoInput();
 	}
 
-    void DoInput()
+    private void DoInput()
     {
         if (isAllowed)
         {
@@ -37,6 +38,7 @@ public class Movement : MonoBehaviour {
                 this.currentDirection = direction.right;
                 this.TimeLeft = this.defaultTime;
                 SoundManager.Instance.Play("footsteps.L", 1.0f);
+                this.GetComponent<Animation>().Play("Walk");
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -44,7 +46,15 @@ public class Movement : MonoBehaviour {
                 this.currentDirection = direction.left;
                 this.TimeLeft = this.defaultTime;
                 SoundManager.Instance.Play("footsteps.R", 1.0f);
+                this.GetComponent<Animation>().Play("Walk");
             }
+
+            if (Input.GetKeyUp(KeyCode.W)
+                || Input.GetKeyUp(KeyCode.UpArrow))
+            {
+                //this.GetComponent<Animation>().Stop("Walk");
+            }
+
         }
     }
 
@@ -68,6 +78,7 @@ public class Movement : MonoBehaviour {
             else
             {
                 isAllowed = true;
+                //this.GetComponent<Animation>().Play("Idle");
             }
         }
 
