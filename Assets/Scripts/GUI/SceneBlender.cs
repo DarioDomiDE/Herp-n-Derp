@@ -95,7 +95,7 @@ public class SceneBlender : MonoBehaviour
 	{
 		LoadNextScene = "";
 		if(targetObject == null)
-			SetTarget(GameObject.Find("Herb_n_Derb"));
+			SetTarget(GameObject.FindGameObjectWithTag("Player"));
 		timer = 0;
 		for(int i=0; i < 2; i++)
 		{
@@ -165,7 +165,7 @@ public class SceneBlender : MonoBehaviour
         {
             return Level[++currentLevel];
         }
-        return "gameover";
+        return "winscreen";
     }
 
 	public void FadeIn()
@@ -230,8 +230,11 @@ public class SceneBlender : MonoBehaviour
 			}
 			return true;
 		}
-		else if(LoadNextScene!="")
-			Application.LoadLevel(LoadNextScene);
+		else
+        {
+            if (LoadNextScene != "")
+                Application.LoadLevel(LoadNextScene);
+        }
 
 		return false;
 	}
