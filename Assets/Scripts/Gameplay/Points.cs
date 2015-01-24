@@ -18,7 +18,6 @@ public class Points : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-        ChangeGUI();
 
         _instance = this;
 
@@ -31,7 +30,7 @@ public class Points : MonoBehaviour {
         ChangeGUI();
 	}
 
-    private void ChangeGUI()
+    public void ChangeGUI()
     {
         GameObject.FindGameObjectWithTag("PointCounter").GetComponent<GUIText>().text = PointCounter.ToString();
     }

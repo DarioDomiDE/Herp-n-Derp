@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
 	public void TransfareToPoints()
 	{
         counting = false;
-        GameObject.FindGameObjectWithTag("Container").GetComponent<Points>().AddPoints((int)timer);
+        Points.Instance.AddPoints((int)timer);
 	}
 
 	public void StartTimerCounting()
@@ -39,8 +39,7 @@ public class Timer : MonoBehaviour
 		if(timer < 0)
         {
             TransfareToPoints();
-            GameObject.FindGameObjectWithTag("SceneBlender").GetComponent<SceneBlender>().FadeToScene("gameover");
-            SoundManager.Instance.Play("Derp_sad", 1.0f);
+			GameManager.SetGameOver();
         }
 
 	}

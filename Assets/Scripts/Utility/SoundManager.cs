@@ -35,7 +35,7 @@ public class SoundManager : MonoBehaviour {
         source.volume = volume;
         source.pitch = pitch;
         source.Play();
-        //Destroy(go, clip.length);
+        Destroy(go, clip.length);
         return source;
     }
 
