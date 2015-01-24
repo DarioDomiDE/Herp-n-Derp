@@ -7,7 +7,8 @@ public class Movement : MonoBehaviour {
     private float SideSpeed = 1.0f;
     private float Angle = 200.0f;
     private float defaultTime = 0.3f;
-
+	private float groundHeight = 0;
+	private bool falling = false;
     private bool isAllowed = true;
     private float TimeLeft = 0;
     private enum direction
@@ -21,11 +22,13 @@ public class Movement : MonoBehaviour {
 	void Start ()
     {
         //GameEvents.GetInstance().OnKeyDown += this.DoInput;
+		groundHeight = GameObject.Find("Ground").transform.position.y;
 	}
 	
 	void Update () {
         DoMovement();
         DoInput();
+		CheckFalling();
 	}
 
     private void DoInput()
@@ -37,7 +40,7 @@ public class Movement : MonoBehaviour {
                 isAllowed = false;
                 this.currentDirection = direction.right;
                 this.TimeLeft = this.defaultTime;
-                SoundManager.Instance.Play("footsteps.L", 1.0f);
+                SoundManager.Instance.Play("footsteps.L", 0.5f);
                 this.GetComponent<Animation>().Play("Walk");
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -45,7 +48,7 @@ public class Movement : MonoBehaviour {
                 isAllowed = false;
                 this.currentDirection = direction.left;
                 this.TimeLeft = this.defaultTime;
-                SoundManager.Instance.Play("footsteps.R", 1.0f);
+                SoundManager.Instance.Play("footsteps.R", 0.5f);
                 this.GetComponent<Animation>().Play("Walk");
             }
 
@@ -84,6 +87,17 @@ public class Movement : MonoBehaviour {
 
     }
 
+	private void CheckFalling()
+	{
+		if(gameObject.transform.position.y < ( groundHeight - 0.5f ))
+		{
+			if(!falling)
+			{
+				GameManager.sound.Play("Derp_fall", 1.0f);
+				falling = true;
+			}
+		}
 
+	}
 
 }

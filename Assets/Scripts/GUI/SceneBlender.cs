@@ -9,23 +9,6 @@ public class SceneBlender : MonoBehaviour
     public int currentLevel = 0;
     private bool enable = true;
 
-	//private bool _blend = false;
-	//[SerializeField]
-	//private bool blend = false;
-	//private bool Blend
-	//{
-	//	get { return _blend; }
-	//	set
-	//	{
-	//		if(value != _blend)
-	//		{
-	//			blend = _blend = value;
-	//			if(value)
-	//				FadeToScene("scene2");
-	//		}
-	//		blend = _blend;
-	//	}
-	//}
 
 	public enum STATE : int
 	{

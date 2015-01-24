@@ -7,8 +7,20 @@ public class Door : MonoBehaviour {
     public GameObject searchedObject;
     public int searchedCounter;
     public int pressedButtons;
-
-    private bool opened = false;
+	[SerializeField]
+    private bool _opened = false;
+	private bool opened
+	{
+		get { return _opened; }
+		set
+		{
+			if(value &&(value != _opened))
+			{
+				_opened = true;
+				GameManager.sound.Play("Door - Open", 1.0f);
+			}
+		}
+	}
     private int alreadyPressedButtons = 0;
 
     void Start()
@@ -16,10 +28,10 @@ public class Door : MonoBehaviour {
 
     }
 
-    void Update()
-    {
+	//void Update()
+	//{
 
-    }
+	//}
 
     public void AddPressedButton()
     {
@@ -38,11 +50,13 @@ public class Door : MonoBehaviour {
         {
             opened = true;
             // Disable Texture
+            GameManager.door.transform.FindChild("Key").GetComponent<MeshRenderer>().enabled = false;
         }
         else if(opened == true && alreadyPressedButtons != pressedButtons)
         {
             opened = false;
             // Enable Texture
+            GameManager.door.transform.FindChild("Key").GetComponent<MeshRenderer>().enabled = true;
         }
     }
 
@@ -57,6 +71,7 @@ public class Door : MonoBehaviour {
                 )
                 )
             {
+                SoundManager.Instance.Play("Key - Interact with door", 1.0f);
 				GameManager.SetNextLevel();
             }
         }
