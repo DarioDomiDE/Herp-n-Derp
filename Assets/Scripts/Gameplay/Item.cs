@@ -18,8 +18,6 @@ public class Item : MonoBehaviour {
 		Pickup();
 	}
 
-
-
     public void Pickup()
     {
 		if(ShowBubble != null)
@@ -28,8 +26,13 @@ public class Item : MonoBehaviour {
 
     public void Drop()
     {
-		if(ShowBubble != null)
-			ShowBubble(true);
+        if (ShowBubble != null)
+            ShowBubble(true);
+    }
+
+    public void Eating()
+    {
+        GameManager.door.AddEating();
     }
 
 }
