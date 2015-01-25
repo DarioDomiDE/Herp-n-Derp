@@ -39,7 +39,7 @@ public class SoundManager : MonoBehaviour {
         return source;
     }
 
-    public void Play(string Name, float Volume)
+    public float Play(string Name, float Volume)
     {
         int index = -1;
         for (int i = 0; i < AudioList.Count; i++)
@@ -53,10 +53,11 @@ public class SoundManager : MonoBehaviour {
         if (index == -1)
         {
             Debug.Log("Sound " + Name + " not found");
-            return;
+            return -1;
         }
 
         Play(AudioList[index], Volume, 1f);
+		return AudioList[index].length;
     }
  
 

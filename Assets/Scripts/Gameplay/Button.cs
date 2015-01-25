@@ -1,22 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Button : MonoBehaviour {
+public class Button : MonoBehaviour 
+{
 
     public bool stayDown = true;
-    private float PositionUp = 0.15f;
-    private float PositionDown = -0.15f;
-    private bool enable = false;
+    protected float PositionUp = 0.15f;
+    protected float PositionDown = -0.15f;
+    protected bool enable = false;
 
-	void Start () {
-	    
-	}
-	
-	void Update () {
-	    
+	void Start () 
+	{
+		OnButtonStart();
 	}
 
-    void OnTriggerEnter(Collider other)
+	virtual protected void Update()
+	{
+
+	}
+
+	virtual protected void OnButtonStart()
+	{
+
+	}
+
+
+    virtual protected void OnTriggerEnter(Collider other)
     {
         if (enable == false)
         {
@@ -30,7 +39,7 @@ public class Button : MonoBehaviour {
         }
     }
 
-    void OnTriggerExit(Collider other)
+    virtual protected void OnTriggerExit(Collider other)
     {
         if (stayDown == false)
         {

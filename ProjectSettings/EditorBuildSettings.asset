@@ -16,7 +16,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room1_Empty.unity
   - enabled: 1
-    path: Assets/Scenes/Room2_Blocked.unity
+    path: Assets/Scenes/Room2_FULL.unity
   - enabled: 1
     path: Assets/Scenes/Room3_BlockedMore.unity
   - enabled: 1

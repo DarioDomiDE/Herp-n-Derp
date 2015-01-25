@@ -5,6 +5,8 @@ public class SwirlyTwirly : MonoBehaviour {
 
 	private float angle=0;
 	public float speed = 10;
+	private Vector3 scaler = new Vector3(1,1,1);
+
 	void Start () 
 	{
 	
@@ -14,6 +16,7 @@ public class SwirlyTwirly : MonoBehaviour {
 	void Update() 
 	{
 		angle = speed * Time.deltaTime;
-		transform.Rotate(new Vector3(0,0,-1),angle,Space.World);
+		transform.GetChild(0).Rotate(new Vector3(0,1,0),angle);
+		transform.localScale = scaler;
 	}
 }

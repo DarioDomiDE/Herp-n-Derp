@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Item : MonoBehaviour {
 
+	protected internal delegate void BubbleSwitch(bool show);
+	protected internal BubbleSwitch ShowBubble;
+
     public enum status
     {
         singlePress,
@@ -10,22 +13,23 @@ public class Item : MonoBehaviour {
     }
     public status itemStatus = status.singlePress;
 
-	void Start () 
+	void Start() 
 	{
+		Pickup();
 	}
-	
-	void Update () 
-	{
-	}
+
+
 
     public void Pickup()
     {
-        //this.transform.Find("Bubble").GetComponent<MeshRenderer>().enabled = false;
+		if(ShowBubble != null)
+			ShowBubble(false);
     }
 
     public void Drop()
     {
-        //this.transform.Find("Bubble").GetComponent<MeshRenderer>().enabled = true;
+		if(ShowBubble != null)
+			ShowBubble(true);
     }
 
 }

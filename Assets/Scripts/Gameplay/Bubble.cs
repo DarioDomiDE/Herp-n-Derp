@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bubble : MonoBehaviour {
+public class Bubble : MonoBehaviour 
+{
 
 	// Use this for initialization
-	void Start () {
-	
+	void Awake() 
+	{
+		transform.root.gameObject.GetComponent<Item>().ShowBubble = SetVisible;
+		//if(renderer.enabled)
+		//	this.transform.right = ( Camera.main.transform.position - this.transform.position );
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void SetVisible(bool visible)
+	{
+		this.renderer.enabled = visible;
 	}
 }
