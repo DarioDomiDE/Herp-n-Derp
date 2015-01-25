@@ -2236,6 +2236,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 5e6c789695480b540b885e7f4c8e1a68, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: 5e6c789695480b540b885e7f4c8e1a68, type: 3}
+  - {fileID: 7400004, guid: 5e6c789695480b540b885e7f4c8e1a68, type: 3}
   - {fileID: 7400002, guid: 5e6c789695480b540b885e7f4c8e1a68, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -8064,11 +8065,11 @@ Renderer:
   m_GameObject: {fileID: 1457882802}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: ccb059c7fee230f48aded7d16ef47326, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
