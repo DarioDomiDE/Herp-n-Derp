@@ -99,19 +99,17 @@ public class SceneBlender : MonoBehaviour
 
         // Config -> Level
 		Level[0] = "Room1_Empty";
-		Level[1] = "Room2_Blocked";
-		Level[2] = "Room3_BlockedMore";
-		Level[3] = "Room4_SmallPath";
-		Level[4] = "Room5_SmallerPath";
-		Level[5] = "Room6_TheKey";
-		Level[6] = "Room7_TwoKeys";
-		Level[7] = "Room8_Button";
-		Level[8] = "Room9_Buttons_NEW";
-		Level[9] = "Room9_ButtonBlock";
-		Level[10] = "Room10_Meal";
-		Level[11] = "Room11_ButtonsMeal";
-		Level[12] = "Room12_Empty";
-		Level[13] = "endscreen";
+        Level[1] = "Room3_BlockedMore";
+		Level[2] = "Room5_SmallerPath";
+        Level[3] = "Room6_TheKey";
+        Level[4] = "Room7_Btn";
+        Level[5] = "Room9_ButtonBlock";
+        Level[6] = "Room9_Buttons_NEW";
+		Level[7] = "Room10_Meal";
+		Level[8] = "Room11_ButtonsMeal";
+        Level[9] = "Room12_Empty";
+        Level[10] = "Room13_Hard";
+		Level[11] = "endscreen";
 
 
 

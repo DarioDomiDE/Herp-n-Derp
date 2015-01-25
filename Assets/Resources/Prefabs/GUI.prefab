@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.90700006, y: 5.40159988, z: -10.4440002}
+  m_LocalPosition: {x: 7.90700006, y: 5.67340565, z: -10.4440002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.90698862, y: 5.61892891, z: -10.4435282}
+  m_LocalPosition: {x: 7.90698862, y: 5.61912537, z: -10.4435282}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
@@ -80,8 +80,8 @@ Transform:
   m_LocalPosition: {x: -7.40698862, y: -4.70387459, z: 10.4435282}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400002}
   - {fileID: 400000}
+  - {fileID: 400002}
   m_Father: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -103,10 +103,10 @@ GUIText:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 0
+  m_Text: 0 Points
   m_Anchor: 1
   m_Alignment: 1
-  m_PixelOffset: {x: 0, y: 103.889999}
+  m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: e9d8d548c8db72b4098674993c313f31, type: 3}
@@ -115,7 +115,7 @@ GUIText:
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4288909993
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!132 &13200002

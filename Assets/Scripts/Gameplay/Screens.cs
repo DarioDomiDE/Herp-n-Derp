@@ -38,5 +38,9 @@ public class Screens : MonoBehaviour {
         {
             Application.LoadLevel("Room1_Empty");
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 	}
 }

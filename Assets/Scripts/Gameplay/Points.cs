@@ -32,7 +32,7 @@ public class Points : MonoBehaviour {
 
     public void ChangeGUI()
     {
-        GameObject.FindGameObjectWithTag("PointCounter").GetComponent<GUIText>().text = PointCounter.ToString();
+        GameObject.FindGameObjectWithTag("PointCounter").GetComponent<GUIText>().text = PointCounter.ToString() + " Points";
     }
 	
 }
