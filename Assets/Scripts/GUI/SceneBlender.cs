@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class SceneBlender : MonoBehaviour 
 {
 
-    private string[] Level = new string[10];
+    private string[] Level = new string[20];
     public int currentLevel = 0;
     private bool enable = true;
 
@@ -103,6 +103,16 @@ public class SceneBlender : MonoBehaviour
 		Level[2] = "Room3_BlockedMore";
 		Level[3] = "Room4_SmallPath";
 		Level[4] = "Room5_SmallerPath";
+		Level[5] = "Room6_TheKey";
+		Level[6] = "Room7_TwoKeys";
+		Level[7] = "Room8_Button";
+		Level[8] = "Room9_Buttons_NEW";
+		Level[9] = "Room9_ButtonBlock";
+		Level[10] = "Room10_Meal";
+		Level[11] = "Room11_ButtonsMeal";
+		Level[12] = "Room12_Empty";
+
+
 
 
 	}
