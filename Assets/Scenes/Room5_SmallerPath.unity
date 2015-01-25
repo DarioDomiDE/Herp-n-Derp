@@ -2029,7 +2029,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.35000002, y: 2.01999998, z: 1.58000004}
+  m_Size: {x: 1.35000002, y: 2.42000008, z: 1.58000004}
   m_Center: {x: 0, y: 1.22000003, z: 0}
 --- !u!111 &399206621
 Animation:
@@ -4334,7 +4334,7 @@ Animator:
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &855290792
@@ -5346,7 +5346,7 @@ Transform:
   - {fileID: 1611682209}
   - {fileID: 945341124}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1 &1006103367
 GameObject:
   m_ObjectHideFlags: 0
@@ -9327,7 +9327,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1001 &1729164515
 Prefab:
   m_ObjectHideFlags: 0
@@ -10467,7 +10467,7 @@ MonoBehaviour:
   searchedObject: {fileID: 0}
   searchedCounter: 0
   pressedButtons: 0
-  _opened: 0
+  _opened: 1
 --- !u!95 &1993872117
 Animator:
   serializedVersion: 3
@@ -11021,6 +11021,18 @@ Prefab:
     - target: {fileID: 400008, guid: 2ae5cad1497ae0a4bafdad2acb5933e8, type: 2}
       propertyPath: m_LocalRotation.w
       value: -3.09086232e-08
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 2ae5cad1497ae0a4bafdad2acb5933e8, type: 2}
+      propertyPath: _opened
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500002, guid: 2ae5cad1497ae0a4bafdad2acb5933e8, type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: 2ae5cad1497ae0a4bafdad2acb5933e8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ae5cad1497ae0a4bafdad2acb5933e8, type: 2}

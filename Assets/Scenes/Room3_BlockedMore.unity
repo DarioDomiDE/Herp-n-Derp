@@ -1259,7 +1259,7 @@ MonoBehaviour:
   searchedObject: {fileID: 0}
   searchedCounter: 0
   pressedButtons: 0
-  _opened: 0
+  _opened: 1
 --- !u!95 &240594507
 Animator:
   serializedVersion: 3
@@ -2280,7 +2280,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.35000002, y: 2.01999998, z: 1.58000004}
+  m_Size: {x: 1.35000002, y: 2.42000008, z: 1.58000004}
   m_Center: {x: 0, y: 1.22000003, z: 0}
 --- !u!111 &399206621
 Animation:
@@ -3226,6 +3226,14 @@ Prefab:
     - target: {fileID: 400008, guid: 2ae5cad1497ae0a4bafdad2acb5933e8, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 2ae5cad1497ae0a4bafdad2acb5933e8, type: 2}
+      propertyPath: _opened
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: 2ae5cad1497ae0a4bafdad2acb5933e8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ae5cad1497ae0a4bafdad2acb5933e8, type: 2}
