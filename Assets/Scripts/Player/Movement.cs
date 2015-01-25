@@ -23,6 +23,16 @@ public class Movement : MonoBehaviour {
     {
         //GameEvents.GetInstance().OnKeyDown += this.DoInput;
 		groundHeight = GameObject.Find("Ground").transform.position.y;
+
+        // Animation Speed
+        Animation ani = this.GetComponent<Animation>();
+        foreach (AnimationState state in ani)
+        {
+            if (state.name == "Walk_Left" || state.name == "Walk_Right")
+            {
+                state.speed = 2.0f;
+            }
+        }
 	}
 	
 	void Update () {
@@ -41,7 +51,9 @@ public class Movement : MonoBehaviour {
                 this.currentDirection = direction.right;
                 this.TimeLeft = this.defaultTime;
                 SoundManager.Instance.Play("footsteps.L", 0.7f);
-       //         this.GetComponent<Animation>().Play("Walk");
+                this.GetComponent<Animation>().Play("Walk_Left");
+
+
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -49,13 +61,15 @@ public class Movement : MonoBehaviour {
                 this.currentDirection = direction.left;
                 this.TimeLeft = this.defaultTime;
                 SoundManager.Instance.Play("footsteps.R", 0.7f);
-       //         this.GetComponent<Animation>().Play("Walk");
+                this.GetComponent<Animation>().Play("Walk_Right");
+
             }
 
             if (Input.GetKeyUp(KeyCode.W)
                 || Input.GetKeyUp(KeyCode.UpArrow))
             {
-                //this.GetComponent<Animation>().Stop("Walk");
+                this.GetComponent<Animation>().Stop("Walk_Left");
+                this.GetComponent<Animation>().Stop("Walk_Right");
             }
 
         }
@@ -81,7 +95,7 @@ public class Movement : MonoBehaviour {
             else
             {
                 isAllowed = true;
-                //this.GetComponent<Animation>().Play("Idle");
+                this.GetComponent<Animation>().Play("Idle");
             }
         }
 
