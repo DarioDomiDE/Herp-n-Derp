@@ -111,6 +111,7 @@ public class SceneBlender : MonoBehaviour
 		Level[10] = "Room10_Meal";
 		Level[11] = "Room11_ButtonsMeal";
 		Level[12] = "Room12_Empty";
+		Level[13] = "endscreen";
 
 
 
