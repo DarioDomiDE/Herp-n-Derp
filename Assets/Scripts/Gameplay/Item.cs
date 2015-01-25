@@ -18,4 +18,14 @@ public class Item : MonoBehaviour {
 	{
 	}
 
+    public void Pickup()
+    {
+        //this.transform.Find("Bubble").GetComponent<MeshRenderer>().enabled = false;
+    }
+
+    public void Drop()
+    {
+        //this.transform.Find("Bubble").GetComponent<MeshRenderer>().enabled = true;
+    }
+
 }

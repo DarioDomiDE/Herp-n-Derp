@@ -72,7 +72,8 @@ public class Door : MonoBehaviour {
                 )
             {
                 SoundManager.Instance.Play("Key - Interact with door", 1.0f);
-				GameManager.SetNextLevel();
+                GameManager.door.transform.FindChild("Key").GetComponent<MeshRenderer>().enabled = false;
+                GameManager.SetNextLevel();
             }
         }
     }
