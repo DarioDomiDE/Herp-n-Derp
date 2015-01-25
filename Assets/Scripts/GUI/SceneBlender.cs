@@ -106,7 +106,7 @@ public class SceneBlender : MonoBehaviour
 		Level[5] = "Room6_TheKey";
 		Level[6] = "Room7_TwoKeys";
 		Level[7] = "Room8_Button";
-		Level[8] = "Room9_Buttons";
+		Level[8] = "Room9_Buttons_NEW";
 		Level[9] = "Room9_ButtonBlock";
 		Level[10] = "Room10_Meal";
 		Level[11] = "Room11_ButtonsMeal";

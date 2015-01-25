@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: eb65442a4f3ff35468a51298df97aa21
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: screen_gameover
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
