@@ -98,9 +98,12 @@ public class SceneBlender : MonoBehaviour
 		}
 
         // Config -> Level
-        Level[0] = "scene1";
-        Level[1] = "scene2";
-        Level[2] = "scene3";
+		Level[0] = "Room1_Empty";
+		Level[1] = "Room2_Blocked";
+		Level[2] = "Room3_BlockedMore";
+		Level[3] = "Room4_SmallPath";
+		Level[4] = "Room5_SmallerPath";
+
 
 	}
 
