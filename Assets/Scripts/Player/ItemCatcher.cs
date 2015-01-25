@@ -25,6 +25,7 @@ public class ItemCatcher : MonoBehaviour {
                     {
                         catchedCounter++;
                         GameObject.Destroy(currentItem.gameObject);
+                        currentItem.Eating();
                         currentItem = null;
                         SoundManager.Instance.Play("Derp_eating", 1.0f);
                     }

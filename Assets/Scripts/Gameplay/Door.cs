@@ -22,6 +22,7 @@ public class Door : MonoBehaviour {
 		}
 	}
     private int alreadyPressedButtons = 0;
+    private int alreadyEatings = 0;
 
     void Start()
     {
@@ -36,23 +37,30 @@ public class Door : MonoBehaviour {
     public void AddPressedButton()
     {
         alreadyPressedButtons++;
-        CheckAllButtonsPressed();
+        CheckAllButtonsPressedAndItems();
     }
+
     public void RemovePressedButton()
     {
         alreadyPressedButtons--;
-        CheckAllButtonsPressed();
+        CheckAllButtonsPressedAndItems();
     }
 
-    private void CheckAllButtonsPressed()
+    public void AddEating()
     {
-        if (opened == false && alreadyPressedButtons == pressedButtons)
+        alreadyEatings++;
+        CheckAllButtonsPressedAndItems();
+    }
+
+    private void CheckAllButtonsPressedAndItems()
+    {
+        if (opened == false && alreadyPressedButtons == pressedButtons && alreadyEatings == searchedCounter)
         {
             opened = true;
             // Disable Texture
             GameManager.door.transform.FindChild("Key").GetComponent<MeshRenderer>().enabled = false;
         }
-        else if(opened == true && alreadyPressedButtons != pressedButtons)
+        else if (opened == true && (alreadyPressedButtons != pressedButtons || alreadyEatings != searchedCounter))
         {
             opened = false;
             // Enable Texture
@@ -64,7 +72,7 @@ public class Door : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            if ((opened == true && searchedCounter == 0) ||
+            if ((opened == true) ||
                 (
                 pressedButtons == 0 &&
                 GameObject.FindGameObjectWithTag("ItemCatcher").GetComponent<ItemCatcher>().CheckItem(this.searchedObject, this.searchedCounter)
