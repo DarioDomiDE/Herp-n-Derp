@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 132: {fileID: 13200000}
-  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: PointCounter
   m_TagString: PointCounter
@@ -60,7 +59,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 1
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -72,7 +70,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
-  m_RootOrder: 0
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -86,19 +83,6 @@ Transform:
   - {fileID: 400002}
   - {fileID: 400000}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4f5f7481463ef840b0ff92960210ea3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startValue: 30
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,15 +103,15 @@ GUIText:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 20
+  m_Text: 0
   m_Anchor: 1
   m_Alignment: 1
-  m_PixelOffset: {x: 0, y: 20.0699997}
+  m_PixelOffset: {x: 0, y: 103.889999}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: e9d8d548c8db72b4098674993c313f31, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 81
+  m_FontSize: 23
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
