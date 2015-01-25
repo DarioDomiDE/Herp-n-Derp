@@ -318,7 +318,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e29fe4ef372905409aa350cce4b9b2d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -.125249997
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e29fe4ef372905409aa350cce4b9b2d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -343,6 +343,10 @@ Prefab:
     - target: {fileID: 400000, guid: 5e29fe4ef372905409aa350cce4b9b2d, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 5e29fe4ef372905409aa350cce4b9b2d, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e29fe4ef372905409aa350cce4b9b2d, type: 2}
@@ -2959,7 +2963,7 @@ MeshCollider:
   m_GameObject: {fileID: 554130939}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -2979,7 +2983,7 @@ Transform:
   m_PrefabInternal: {fileID: 56710023}
   m_GameObject: {fileID: 554130939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -.125249997, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7613,7 +7617,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 1065655446}
   m_GameObject: {fileID: 1457231756}
   m_Enabled: 0
-  m_Texture: {fileID: 2800000, guid: fa8063bcd2beccf4cb080ec7bc6287a3, type: 3}
+  m_Texture: {fileID: 2800000, guid: bcdcaf647129d51408989ea820b47d7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_PixelInset:
     serializedVersion: 2
