@@ -34,12 +34,14 @@ public class ItemCatcher : MonoBehaviour {
                     {
                         currentItem.transform.parent = this.transform.parent;
                         catchedObject = currentItem.gameObject;
+                        currentItem.Pickup();
                         SoundManager.Instance.Play("Derp_pickup", 1.0f);
                     }
                     if(Input.GetKeyUp(KeyCode.U))
                     {
                         currentItem.transform.parent = this.transform.parent.parent;
                         catchedObject = null;
+                        currentItem.Drop();
                         SoundManager.Instance.Play("Derp_drop", 1.0f);
                     }
                     break;
