@@ -3,12 +3,6 @@ using System.Collections;
 
 public class TriggerHandler : MonoBehaviour 
 {
-
-	// Use this for initialization
-	void Start ()
-	{
-	
-	}
 	
 	void OnTriggerEnter(Collider other)
 	{
