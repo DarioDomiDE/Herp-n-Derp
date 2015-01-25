@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 	{
 		if(!IsGamingOver)
 		{
+			timer.StopTimerCounting();
 			IsGamingOver = true;
 			sound.Play("Derp_sad", 1.0f);
 			blender.FadeToScene("gameover");
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
 
 	public static void SetGameWin()
 	{
+		timer.StopTimerCounting();
 		sound.Play("Derp_happy", 1.0f);
 		timer.TransfareToPoints();
 		blender.FadeToScene("winscreen");
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
 
 	public static void SetNextLevel()
 	{
+		timer.StopTimerCounting();
 		sound.Play("Derp_happy", 1.0f);
 		timer.TransfareToPoints();
 		blender.FadeNextScene();

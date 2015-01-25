@@ -28,20 +28,27 @@ public class Timer : MonoBehaviour
         counting = true;
 	}
 
+	public void StopTimerCounting()
+	{
+		counting = false;
+		ChangeGUI((int)timer);
+	}
+
 	void Update() 
 	{
-		timer -= Time.deltaTime;
-        int timerSec = (int)timer;
-        if (timerSec != currentGUIValue)
-        {
-            ChangeGUI(timerSec);
-        }
-		if(timer < 0)
-        {
-            TransfareToPoints();
-			GameManager.SetGameOver();
-        }
-
+		if(counting)
+		{
+			timer -= Time.deltaTime;
+			int timerSec = (int)timer;
+			if(timerSec != currentGUIValue)
+			{
+				ChangeGUI(timerSec);
+			}
+			if(timer < 0)
+			{
+				GameManager.SetGameOver();
+			}
+		}
 	}
 
     private void ChangeGUI(int sec)
