@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Points : MonoBehaviour {
 
-    public int PointCounter = 0;
+    private int PointCounter = 0;
 
     private static Points _instance = null;
     public static Points Instance
@@ -29,6 +29,16 @@ public class Points : MonoBehaviour {
 		PointCounter += points;
         ChangeGUI();
 	}
+
+    public int GetPoints()
+    {
+        return this.PointCounter;
+    }
+
+    public void ResetPoints()
+    {
+        this.PointCounter = 0;
+    }
 
     public void ChangeGUI()
     {

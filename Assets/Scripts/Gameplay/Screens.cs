@@ -11,8 +11,10 @@ public class Screens : MonoBehaviour {
     {
         if(GUI != null)
         {
-            int points = GameObject.FindGameObjectWithTag("PointContainer").GetComponent<Points>().PointCounter;
+            Points pointsComp = GameObject.FindGameObjectWithTag("PointContainer").GetComponent<Points>();
+            int points = pointsComp.GetPoints();
             GUI.GetComponent<GUIText>().text = "Points: " + points.ToString();
+            pointsComp.ResetPoints();
         }
     }
 
