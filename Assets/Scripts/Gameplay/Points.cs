@@ -26,7 +26,7 @@ public class Points : MonoBehaviour {
 
 	public void AddPoints(int points)
 	{
-		PointCounter = points;
+		PointCounter += points;
         ChangeGUI();
 	}
 

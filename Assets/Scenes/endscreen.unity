@@ -215,7 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button1: {fileID: 493811028}
   button2: {fileID: 107917750}
-  GUI: {fileID: 0}
+  GUI: {fileID: 640048268}
 --- !u!4 &539682598
 Transform:
   m_ObjectHideFlags: 0

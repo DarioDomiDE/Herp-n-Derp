@@ -14,9 +14,9 @@ public class Door : MonoBehaviour {
 		get { return _opened; }
 		set
 		{
-			if(value &&(value != _opened))
+			if(value != _opened)
 			{
-				_opened = true;
+                _opened = value;
 				GameManager.sound.Play("Door - Open", 1.0f);
 			}
 		}
