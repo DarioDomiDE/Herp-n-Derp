@@ -22,13 +22,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room11_BtnsMealLava.unity
   - enabled: 1
-    path: Assets/Scenes/Room2_BlockedMore.unity
+    path: Assets/Scenes/Room2a_Blocked.unity
   - enabled: 1
     path: Assets/Scenes/Room3_SmallerPath.unity
   - enabled: 1
     path: Assets/Scenes/Room4_TheKey.unity
   - enabled: 1
-    path: Assets/Scenes/Room5_Btn.unity
+    path: Assets/Scenes/Room5b_Btn.unity
   - enabled: 1
     path: Assets/Scenes/Room6_ButtonBlock.unity
   - enabled: 1

@@ -8568,7 +8568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4f5f7481463ef840b0ff92960210ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startValue: 30
+  startValue: 55
 --- !u!132 &1260738952
 GUIText:
   m_ObjectHideFlags: 0
@@ -13084,6 +13084,10 @@ Prefab:
     - target: {fileID: 11400000, guid: d649e34d4ac245d41868643286f64ed2, type: 2}
       propertyPath: startValue
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: d649e34d4ac245d41868643286f64ed2, type: 2}
+      propertyPath: startValue
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d649e34d4ac245d41868643286f64ed2, type: 2}
