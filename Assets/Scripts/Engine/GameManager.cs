@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 	public static SoundManager sound;
 	public static Door door;
 	public static List<Item> items;
+    public static Points points;
 
 	// Use this for initialization
 	void Start() 
@@ -21,9 +22,10 @@ public class GameManager : MonoBehaviour
 		items = new List<Item>();
 		foreach(Item item in Component.FindObjectsOfType<Item>())
 			items.Add(item);
+        points = GameObject.FindGameObjectWithTag("PointContainer").GetComponent<Points>();
 
-		if(Points.Instance != null)
-			Points.Instance.ChangeGUI();
+        if(points != null)
+            points.ChangeGUI();
 
 	}
 	

@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
 	public void TransfareToPoints()
 	{
         counting = false;
-        Points.Instance.AddPoints((int)timer);
+        GameManager.points.AddPoints((int)timer);
 	}
 
 	public void StartTimerCounting()
