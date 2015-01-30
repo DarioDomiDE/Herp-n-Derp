@@ -11,22 +11,29 @@ public class GameManager : MonoBehaviour
 	public static Door door;
 	public static List<Item> items;
     public static Points points;
+    public static Config config;
 
-	// Use this for initialization
-	void Start() 
-	{
+    void Awake()
+    {
 		timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
-		blender = SceneBlender.Instance;
-		sound = SoundManager.Instance;
         door = GameObject.FindGameObjectWithTag("Door").GetComponent<Door>();
 		items = new List<Item>();
 		foreach(Item item in Component.FindObjectsOfType<Item>())
 			items.Add(item);
         points = GameObject.FindGameObjectWithTag("PointContainer").GetComponent<Points>();
+        config = GameObject.FindGameObjectWithTag("Container").GetComponent<Config>();
+    }
 
-        if(points != null)
+    // Use this for initialization
+    void Start()
+    {
+        blender = SceneBlender.Instance;
+        sound = SoundManager.Instance;
+
+        if (points != null)
+        {
             points.ChangeGUI();
-
+        }
 	}
 	
 	public static void SetGameOver()

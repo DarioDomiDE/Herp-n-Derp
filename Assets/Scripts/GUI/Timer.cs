@@ -5,15 +5,16 @@ public class Timer : MonoBehaviour
 {
 	private float timer = 0;
 	private bool counting = false;
-    [SerializeField]
-    private int startValue = 20;
+    //[SerializeField]
+    private int startValue = 0;
     private int currentGUIValue = 0;
 
-	void Start() 
+	void Start()
 	{
         //GameObject.FindGameObjectWithTag("Container").GetComponent<UpdateManager>().OnUpdate += DoUpdate;
+        startValue = GameManager.config.Timer;
         StartTimerCounting();
-	}
+    }
 
 	public void TransfareToPoints()
 	{

@@ -3,7 +3,18 @@ using System.Collections;
 
 public class Points : MonoBehaviour {
 
-    private int PointCounter = 0;
+    private GUIText PointContainerText;
+
+    private int PointCounter
+    {
+        get { return GameManager.config.Points; }
+        set { GameManager.config.Points = value; }
+    }
+
+    void Start()
+    {
+        this.PointContainerText = GameObject.FindGameObjectWithTag("PointCounter").GetComponent<GUIText>();
+    }
 
 	public void AddPoints(int points)
 	{
@@ -23,7 +34,7 @@ public class Points : MonoBehaviour {
 
     public void ChangeGUI()
     {
-        GameObject.FindGameObjectWithTag("PointCounter").GetComponent<GUIText>().text = PointCounter.ToString() + " Points";
+        PointContainerText.text = PointCounter.ToString() + " Points";
     }
 	
 }
