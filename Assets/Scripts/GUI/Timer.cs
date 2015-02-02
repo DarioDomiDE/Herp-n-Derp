@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
 	void Start()
 	{
         //GameObject.FindGameObjectWithTag("Container").GetComponent<UpdateManager>().OnUpdate += DoUpdate;
-        startValue = GameManager.config.Timer;
+        startValue = GameManager.SceneConfig.Timer;
         StartTimerCounting();
     }
 

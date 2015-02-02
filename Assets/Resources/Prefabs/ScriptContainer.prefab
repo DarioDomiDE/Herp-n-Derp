@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: ScriptContainer
   m_TagString: Container
@@ -29,7 +30,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,6 +79,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 73468e33e70156d4cb48847b2b4e3e3b, type: 3}
   - {fileID: 8300000, guid: e620948b4a7fc704683a0e2e2f1eb0c6, type: 3}
   - {fileID: 8300000, guid: d36bf61dbaa84364c9b2e48828478fa9, type: 3}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2a9b79b18349b4ab6baa378a862f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: 30
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

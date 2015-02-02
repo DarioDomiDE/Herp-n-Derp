@@ -6,30 +6,42 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/intro.unity
-  - enabled: 1
     path: Assets/Scenes/endscreen.unity
   - enabled: 1
     path: Assets/Scenes/gameover.unity
   - enabled: 1
+    path: Assets/Scenes/intro.unity
+  - enabled: 1
     path: Assets/Scenes/Room1_Empty.unity
   - enabled: 1
-    path: Assets/Scenes/Room8_Meal.unity
-  - enabled: 1
-    path: Assets/Scenes/Room10_ButtonsMeal.unity
-  - enabled: 1
-    path: Assets/Scenes/Room9_MealLava.unity
+    path: Assets/Scenes/Room10_Buttons.unity
   - enabled: 1
     path: Assets/Scenes/Room11_BtnsMealLava.unity
   - enabled: 1
+    path: Assets/Scenes/Room12_DoubleBtn.unity
+  - enabled: 1
+    path: Assets/Scenes/Room13_CurveWay.unity
+  - enabled: 1
+    path: Assets/Scenes/Room14_MealKeyBtn.unity
+  - enabled: 1
+    path: Assets/Scenes/Room15_Ultimate.unity
+  - enabled: 1
     path: Assets/Scenes/Room2a_Blocked.unity
+  - enabled: 1
+    path: Assets/Scenes/Room2b_BlockedMore.unity
   - enabled: 1
     path: Assets/Scenes/Room3_SmallerPath.unity
   - enabled: 1
     path: Assets/Scenes/Room4_TheKey.unity
+  - enabled: 1
+    path: Assets/Scenes/Room5a_Btn.unity
   - enabled: 1
     path: Assets/Scenes/Room5b_Btn.unity
   - enabled: 1
     path: Assets/Scenes/Room6_ButtonBlock.unity
   - enabled: 1
     path: Assets/Scenes/Room7_Buttons_NEW.unity
+  - enabled: 1
+    path: Assets/Scenes/Room8_Meal.unity
+  - enabled: 1
+    path: Assets/Scenes/Room9_MealLava.unity

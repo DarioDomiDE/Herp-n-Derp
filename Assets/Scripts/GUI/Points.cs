@@ -7,13 +7,22 @@ public class Points : MonoBehaviour {
 
     private int PointCounter
     {
-        get { return GameManager.config.Points; }
-        set { GameManager.config.Points = value; }
+        get { return GameManager.Config.Points; }
+        set { GameManager.Config.Points = value; }
     }
 
     void Start()
     {
-        this.PointContainerText = GameObject.FindGameObjectWithTag("PointCounter").GetComponent<GUIText>();
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        GameObject obj = GameObject.FindGameObjectWithTag("PointCounter");
+        if(obj!= null)
+        {
+            this.PointContainerText = obj.GetComponent<GUIText>();
+        }
     }
 
 	public void AddPoints(int points)

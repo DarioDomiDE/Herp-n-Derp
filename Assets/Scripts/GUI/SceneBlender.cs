@@ -5,10 +5,8 @@ using System.Collections.Generic;
 public class SceneBlender : MonoBehaviour 
 {
 
-    private string[] Level = new string[20];
     public int currentLevel = 0;
     private bool enable = true;
-
 
 	public enum STATE : int
 	{
@@ -97,20 +95,6 @@ public class SceneBlender : MonoBehaviour
 			FadeIn();
 		}
 
-        // Config -> Level
-		Level[0] = "Room1_Empty";
-        Level[1] = "Room3_BlockedMore";
-		Level[2] = "Room5_SmallerPath";
-        Level[3] = "Room6_TheKey";
-        Level[4] = "Room7_Btn";
-        Level[5] = "Room9_ButtonBlock";
-        Level[6] = "Room9_Buttons_NEW";
-		Level[7] = "Room10_Meal";
-		Level[8] = "Room11_ButtonsMeal";
-        Level[9] = "Room12_Empty";
-        Level[10] = "Room13_Hard";
-		Level[11] = "endscreen";
-
 
 
 
@@ -132,7 +116,7 @@ public class SceneBlender : MonoBehaviour
 		FadeOut();
 	}
 
-    public void FadeToScene(string Scene)
+    /*public void FadeToScene(string Scene)
     {
         Fade(Scene);
     }
@@ -140,27 +124,17 @@ public class SceneBlender : MonoBehaviour
 	public void FadeNextScene()
     {
         Fade(GetNextScene());
-	}
+	}*/
 
-    private void Fade(string Scene)
+    public void FadeToScene(string Scene)
     {
         if (enable)
         {
             enable = false;
-
             Instance.FadeInAtStart = true;
             Instance.LoadNextScene = Scene;
             Instance.FadeOut();
         }
-    }
-
-    private string GetNextScene()
-    {
-        if (Level[++currentLevel] != null)
-        {
-            return Level[currentLevel];
-        }
-        return "winscreen";
     }
 
 	public void FadeIn()
