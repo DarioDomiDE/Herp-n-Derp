@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour {
     private float defaultTime = 0.3f;
 	private float groundHeight = 0;
 	private bool falling = false;
-    private bool isAllowed = true;
+    private bool movingAllowed = true;
     private float TimeLeft = 0;
     private enum direction
     {
@@ -18,14 +18,34 @@ public class Movement : MonoBehaviour {
         right = 1
     }
     private direction currentDirection = direction.none;
+    private GameObject player;
+
+    void Awake()
+    {
+        // Awake fired if a scene loaded
+        Debug.Log("awake");
+        GameObject.FindGameObjectWithTag("SceneCrossContainer").GetComponent<UpdateManager>().OnUpdate += DoUpdate;
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        falling = false;
+        movingAllowed = true;
+        TimeLeft = 0;
+
+
+    }
 
 	void Start ()
     {
-        //GameEvents.GetInstance().OnKeyDown += this.DoInput;
+        // Start fired if a scene loaded and the script is used for the 1st time. like a normal initialition Constructor
+        Debug.Log("start");
+
+        GameEvents.GetInstance().OnKeyDown += this.DoInputDown;
+        GameEvents.GetInstance().OnKeyUp += this.DoInputUp;
+
 		groundHeight = GameObject.Find("Ground").transform.position.y;
 
         // Animation Speed
-        Animation ani = this.GetComponent<Animation>();
+        Animation ani = player.GetComponent<Animation>();
         foreach (AnimationState state in ani)
         {
             if (state.name == "Walk_Left" || state.name == "Walk_Right")
@@ -34,76 +54,86 @@ public class Movement : MonoBehaviour {
             }
         }
 	}
-	
-	void Update () {
-        DoMovement();
-        DoInput();
+
+    public void Destruct()
+    {
+        GameObject.FindGameObjectWithTag("SceneCrossContainer").GetComponent<UpdateManager>().OnUpdate -= DoUpdate;
+    }
+
+	void DoUpdate () {
+
+        if (movingAllowed == false)
+            DoMovement();
+        
 		CheckFalling();
 	}
 
-    private void DoInput()
+    private void DoInputDown()
     {
-        if (isAllowed)
+        if (!movingAllowed)
+            return;
+
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                isAllowed = false;
-                this.currentDirection = direction.right;
-                this.TimeLeft = this.defaultTime;
-                SoundManager.Instance.Play("footsteps.L", 0.7f);
-                this.GetComponent<Animation>().Play("Walk_Left");
+            movingAllowed = false;
+            this.currentDirection = direction.right;
+            this.TimeLeft = this.defaultTime;
+            SoundManager.Instance.Play("footsteps.L", 0.7f);
+            player.GetComponent<Animation>().Play("Walk_Left");
 
 
-            }
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                isAllowed = false;
-                this.currentDirection = direction.left;
-                this.TimeLeft = this.defaultTime;
-                SoundManager.Instance.Play("footsteps.R", 0.7f);
-                this.GetComponent<Animation>().Play("Walk_Right");
-
-            }
-
-            if (Input.GetKeyUp(KeyCode.W)
-                || Input.GetKeyUp(KeyCode.UpArrow))
-            {
-                this.GetComponent<Animation>().Stop("Walk_Left");
-                this.GetComponent<Animation>().Stop("Walk_Right");
-            }
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            movingAllowed = false;
+            this.currentDirection = direction.left;
+            this.TimeLeft = this.defaultTime;
+            SoundManager.Instance.Play("footsteps.R", 0.7f);
+            player.GetComponent<Animation>().Play("Walk_Right");
 
         }
     }
 
+    private void DoInputUp(KeyCode key)
+    {
+        /*Debug.Log(key);
+
+        if (!isAllowed)
+            return;
+
+        if (key == KeyCode.W || key == KeyCode.UpArrow)
+        {
+            this.GetComponent<Animation>().Stop("Walk_Left");
+            this.GetComponent<Animation>().Stop("Walk_Right");
+        }*/
+    }
+
     private void DoMovement()
     {
-        if (isAllowed == false)
+        if (this.TimeLeft > 0)
         {
-            if (this.TimeLeft > 0)
-            {
-                this.TimeLeft -= Time.deltaTime;
+            this.TimeLeft -= Time.deltaTime;
 
-                Vector3 pos = Vector3.zero;
-                pos += this.transform.forward * this.Speed;
-                pos += this.transform.right * this.SideSpeed * (int)this.currentDirection;
-                pos *= Time.deltaTime;
-                pos += this.transform.position;
-                this.transform.position = pos;
+            Vector3 pos = Vector3.zero;
+            pos += player.transform.forward * this.Speed;
+            pos += player.transform.right * this.SideSpeed * (int)this.currentDirection;
+            pos *= Time.deltaTime;
+            pos += player.transform.position;
+            player.transform.position = pos;
 
-                this.transform.Rotate(new Vector3(0, 1.0f * (int)this.currentDirection, 0), Angle * Time.deltaTime);
-            }
-            else
-            {
-                isAllowed = true;
-                this.GetComponent<Animation>().Play("Idle");
-            }
+            player.transform.Rotate(new Vector3(0, 1.0f * (int)this.currentDirection, 0), Angle * Time.deltaTime);
+        }
+        else
+        {
+            movingAllowed = true;
+            player.GetComponent<Animation>().Play("Idle");
         }
 
     }
 
 	private void CheckFalling()
 	{
-		if(gameObject.transform.position.y < ( groundHeight - 0.5f ))
+        if (player.transform.position.y < (groundHeight - 0.5f))
 		{
 			if(!falling)
 			{

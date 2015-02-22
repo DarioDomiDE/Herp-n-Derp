@@ -8,12 +8,10 @@ public class UpdateManager : MonoBehaviour {
 
 	void Update ()
     {
-        if(Input.anyKey || Input.anyKeyDown)
+
+        if (OnUpdate != null)
         {
-            if (OnUpdate != null)
-            {
-                OnUpdate();
-            }
+            OnUpdate();
         }
 	}
 

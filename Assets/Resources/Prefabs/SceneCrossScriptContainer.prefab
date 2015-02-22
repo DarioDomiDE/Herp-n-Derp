@@ -12,6 +12,8 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400004}
+  - 114: {fileID: 11436310}
+  - 114: {fileID: 11423988}
   m_Layer: 0
   m_Name: SceneCrossScriptContainer
   m_TagString: SceneCrossContainer
@@ -47,6 +49,7 @@ Transform:
   m_Children:
   - {fileID: 400006}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -58,6 +61,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
+  m_RootOrder: 0
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -158,6 +162,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b41d0f9336f1b7445b1d6993529d0ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11423988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d9b0c66c1b252469348660b28ac20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11436310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c586f97c1fb0c4dbfb072099fa61fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &100100000

@@ -44,9 +44,10 @@ public class GameManager : MonoBehaviour
 		if(!IsLevelOver)
 		{
             IsLevelOver = true;
-            timer.StopTimerCounting();
-			sound.Play("Derp_sad", 1.0f);
-			blender.FadeToScene("gameover");
+            sound.Play("Derp_sad", 1.0f);
+
+            DoEndLevel("gameover");
+
 		}
 	}
 
@@ -55,21 +56,31 @@ public class GameManager : MonoBehaviour
         if (!IsLevelOver)
         {
             IsLevelOver = true;
-            timer.StopTimerCounting();
             sound.Play("Derp_happy", 1.0f);
-            timer.TransfareToPoints();
-            blender.FadeToScene("winscreen");
+
+            DoEndLevel("winscreen");
+
         }
 	}
 
 	public static void SetNextLevel()
 	{
-		timer.StopTimerCounting();
-		sound.Play("Derp_happy", 1.0f);
-		timer.TransfareToPoints();
         GameManager.Config.CurrentLevelToNext();
-        blender.FadeToScene(GetNextLevelName());
+        sound.Play("Derp_happy", 1.0f);
+
+        DoEndLevel(GetNextLevelName());
 	}
+
+    private static void DoEndLevel(string level)
+    {
+        // tmp -> disable movement
+        GameObject.FindGameObjectWithTag("SceneCrossContainer").GetComponent<Movement>().Destruct();
+
+
+        timer.StopTimerCounting();
+        timer.TransfareToPoints();
+        blender.FadeToScene(level);
+    }
 
     private static string GetNextLevelName()
     {
