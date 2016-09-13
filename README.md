@@ -4,4 +4,4 @@ Herp 'n' Derp put the monster in “Monster Advocate”. An unpleasant job nonet
 
   * http://gamejam-beta.innogames.de/jams/global-game-jam-2015/37/
   * http://globalgamejam.org/2015/games/herp-n-derp-monster-advocate
-  * http://www.game-coding.com/herpnderp
+  * http://www.game-codi.ng/herpnderp
